@@ -6,7 +6,7 @@
 
 <p align="center">
   <em>Ask questions. Understand databases. Generate SQL. Analyze data.</em>
-</p>
+</p> 
 
 <p align="center">
 
