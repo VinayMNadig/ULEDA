@@ -1,0 +1,465 @@
+/* =========================
+   Global
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f7fb;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.layout{
+    display:flex;
+    height:100vh;
+}
+
+/* =========================
+   Sidebar
+========================= */
+
+.sidebar{
+    width:280px;
+    background:#111827;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+
+.sidebar-header{
+    margin-bottom:25px;
+}
+
+.sidebar-header h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:#60a5fa;
+}
+
+.new-chat-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.new-chat-btn:hover{
+    background:#1d4ed8;
+}
+
+.chat-list{
+    flex:1;
+    overflow-y:auto;
+}
+
+.chat-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.chat-item:hover{
+    background:#374151;
+}
+
+.chat-item.active{
+    background:#2563eb;
+}
+
+.chat-title{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+.delete-btn{
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    color:#ef4444;
+}
+
+.sidebar-footer{
+    margin-top:20px;
+    text-align:center;
+    color:#9ca3af;
+}
+
+/* =========================
+   Main App
+========================= */
+
+.app{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+/* =========================
+   Chat Window
+========================= */
+
+.chat-window{
+    flex:1;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    overflow-y:auto;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* =========================
+   Messages
+========================= */
+
+.message-row{
+    display:flex;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.user-row{
+    flex-direction:row-reverse;
+}
+
+.avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.user-row .avatar{
+    background:#16a34a;
+}
+
+.message{
+    max-width:75%;
+    padding:16px;
+    border-radius:18px;
+    line-height:1.6;
+}
+
+.user-message{
+    background:#2563eb;
+    color:white;
+}
+
+.bot-message{
+    background:white;
+    border:1px solid #ddd;
+}
+
+/* SQL */
+
+.sql-box,
+.data-box{
+    margin-top:15px;
+}
+
+.sql-box summary,
+.data-box summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.sql-box pre{
+    background:#1e293b;
+    color:#22c55e;
+    padding:15px;
+    border-radius:10px;
+    overflow-x:auto;
+}
+
+/* Copy Button */
+
+.copy-btn{
+    margin-top:10px;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+.copy-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Table */
+
+.table-container{
+    overflow-x:auto;
+}
+
+.result-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.result-table th{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+.result-table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+/* Thinking */
+
+.typing{
+    background:#eef2ff;
+    color:#2563eb;
+    padding:12px 18px;
+    border-radius:15px;
+    width:fit-content;
+}
+
+/* ChatBox */
+
+.chat-box{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.chat-box input{
+    flex:1;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.chat-box button{
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+.chat-box button:hover{
+    background:#1d4ed8;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px){
+
+    .layout{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+    }
+
+    .message{
+        max-width:90%;
+    }
+
+    .chat-box{
+        flex-direction:column;
+    }
+
+    .chat-box button{
+        width:100%;
+    }
+
+}
+
+/* ===========================
+   Authentication Pages
+=========================== */
+
+.auth-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef3ff;
+}
+
+.auth-card{
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.auth-card h1{
+    color:#2563eb;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.auth-card h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#444;
+}
+
+.input-group{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:18px;
+}
+
+.input-group svg{
+    color:#2563eb;
+    margin-right:10px;
+    font-size:18px;
+}
+
+.input-group input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:16px;
+}
+
+.auth-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.auth-btn:hover{
+    background:#1d4ed8;
+}
+
+.auth-link{
+    text-align:center;
+    margin-top:25px;
+}
+
+.auth-link a{
+    margin-left:6px;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.auth-link a:hover{
+    text-decoration:underline;
+}
+/* ===========================
+   Dashboard Header
+=========================== */
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.logout-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+}
+/* ===========================
+   Chat List Improvements
+=========================== */
+
+.chat-title{
+    display:flex;
+    align-items:center;
+    width:100%;
+    cursor:pointer;
+}
+
+.chat-item{
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:10px;
+    transition:.3s;
+}
+
+.chat-item:hover{
+    background:#374151;
+}
+
+.chat-item.active{
+    background:#2563eb;
+}
+
+.chat-list{
+    flex:1;
+    overflow-y:auto;
+}
+
+.chat-list::-webkit-scrollbar{
+    width:6px;
+}
+
+.chat-list::-webkit-scrollbar-thumb{
+    background:#555;
+    border-radius:20px;
+}

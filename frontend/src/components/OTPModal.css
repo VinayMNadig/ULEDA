@@ -1,0 +1,102 @@
+.otp-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.otp-modal {
+    width: 420px;
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.otp-modal h2 {
+    margin-top: 0;
+    color: #1f2937;
+    text-align: center;
+}
+
+.otp-modal p {
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.otp-modal input {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cfcfcf;
+    font-size: 17px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.otp-modal input:focus {
+    border-color: #2563eb;
+}
+
+.otp-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.cancel-btn,
+.verify-btn {
+
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.cancel-btn:hover {
+    background: #d1d5db;
+}
+
+.verify-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.verify-btn:hover {
+    background: #1d4ed8;
+}
+
+.verify-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

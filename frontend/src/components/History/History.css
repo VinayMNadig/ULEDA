@@ -1,0 +1,273 @@
+.history-page{
+
+padding:30px;
+
+animation:fadeHistory .4s ease;
+
+}
+
+/* =========================== */
+
+.history-header{
+
+margin-bottom:25px;
+
+}
+
+.history-header h2{
+
+margin:0;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#0F172A;
+
+}
+
+.history-header p{
+
+margin-top:8px;
+
+font-size:16px;
+
+color:#64748B;
+
+}
+
+/* =========================== */
+
+.history-search{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+background:white;
+
+padding:15px 20px;
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+margin-bottom:30px;
+
+}
+
+.history-search svg{
+
+color:#2563EB;
+
+font-size:18px;
+
+}
+
+.history-search input{
+
+border:none;
+
+outline:none;
+
+font-size:15px;
+
+width:100%;
+
+background:transparent;
+
+}
+
+/* =========================== */
+
+.history-section{
+
+margin-bottom:35px;
+
+}
+
+.history-section h3{
+
+margin-bottom:18px;
+
+font-size:18px;
+
+color:#2563EB;
+
+}
+
+/* =========================== */
+
+.history-card{
+
+background:white;
+
+padding:22px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:18px;
+
+transition:.3s;
+
+}
+
+.history-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/* =========================== */
+
+.history-top{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:17px;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+color:#0F172A;
+
+}
+
+.history-top svg{
+
+color:#7C3AED;
+
+}
+
+/* =========================== */
+
+.history-sql{
+
+background:#0F172A;
+
+padding:18px;
+
+border-radius:12px;
+
+display:flex;
+
+gap:12px;
+
+align-items:flex-start;
+
+margin-bottom:18px;
+
+}
+
+.history-sql svg{
+
+color:#38BDF8;
+
+margin-top:3px;
+
+}
+
+.history-sql code{
+
+color:#38BDF8;
+
+font-size:14px;
+
+white-space:pre-wrap;
+
+word-break:break-word;
+
+}
+
+/* =========================== */
+
+.history-bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+font-size:14px;
+
+color:#64748B;
+
+}
+
+.history-bottom div{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+.history-bottom svg{
+
+color:#2563EB;
+
+}
+
+/* =========================== */
+
+@keyframes fadeHistory{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================== */
+
+@media(max-width:768px){
+
+.history-bottom{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:12px;
+
+}
+
+.history-header h2{
+
+font-size:24px;
+
+}
+
+.history-card{
+
+padding:18px;
+
+}
+
+}

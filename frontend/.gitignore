@@ -1,0 +1,42 @@
+cat > .gitignore <<'EOF'
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# ChromaDB
+chroma/
+chroma_db/
+vectorstore/
+
+# Uploaded databases
+uploaded_databases/
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# Node
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+EOF

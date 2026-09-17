@@ -1,0 +1,57 @@
+.database-page{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:30px;
+
+}
+
+.upload-box{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.upload-box input{
+
+    padding:10px;
+
+}
+
+.upload-box button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.upload-box button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.upload-box button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
