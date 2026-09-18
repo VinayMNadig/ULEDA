@@ -1,6 +1,6 @@
 # 🚀 ULEDA — Universal LLM Enterprise Database Assistant 
 
-<p align="center">
+<p align="center"> 
   <strong>AI-Powered Database Intelligence Platform using LLMs, RAG & AI Agents</strong>
 </p>
 
